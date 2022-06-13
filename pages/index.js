@@ -14,7 +14,7 @@ const App = () => {
         <div>
             <h1>Hello, Welcome to Next JS Serverless Function Demo</h1>
             
-            {singleUser && (
+            
                 <table style={{ border: '1px solid #eeeeee'}}>
                     <tbody >
                         <tr>
@@ -41,7 +41,6 @@ const App = () => {
 //                         </tr>
                     </tbody>
                 </table>
-            )}
         </div>
     )
 };
