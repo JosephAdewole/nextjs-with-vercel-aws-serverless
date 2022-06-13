@@ -10,11 +10,6 @@ const App = () => {
         console.log(singleUser)
     }
     
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        fetchSingleUser()
-    };
     return (
         <div>
             <h1>Hello, Welcome to Next JS Serverless Function Demo</h1>
