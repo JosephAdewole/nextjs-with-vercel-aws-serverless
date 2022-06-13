@@ -6,7 +6,7 @@ const App = () => {
     const [singleUser, setSingleUser] = useState(null);
 
     const fetchSingleUser = () => {
-        axios.post(`/api/getAllPets`).then((res) => setSingleUser(res.data))
+        axios.post(`/api/getAllPets`).then((res) => setSingleUser(res))
         console.log(singleUser)
     }
     
