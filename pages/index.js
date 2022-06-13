@@ -8,6 +8,7 @@ const App = () => {
 
     const fetchSingleUser = () => {
         axios.post(`/api/getAllPets`).then((res) => setSingleUser(res.data))
+        console.log(res.data)
     }
     
 
