@@ -6,7 +6,7 @@ const App = () => {
     const [singleUser, setSingleUser] = useState(null);
 
     const fetchSingleUser = () => {
-        axios.post(`/api/getSingleUser`).then((res) => setSingleUser(res))
+        axios.post(`/api/getAllPets`).then((res) => setSingleUser(res))
         console.log(singleUser)
     }
     
@@ -17,20 +17,20 @@ const App = () => {
             {singleUser && (
                 <table style={{ border: '1px solid #eeeeee'}}>
                     <tbody >
-//                         <tr>
-//                             <td style={{ border: '1px solid #272727'}}>Name</td>
-//                             <td style={{ border: '1px solid #272727'}}>
-//                                 <p>{singleUser.id}</p>
-//                             </td>
-//                         </tr>
-//                         <tr>
-//                             <td style={{ border: '1px solid #272727'}}>Username</td>
-//                             <td style={{ border: '1px solid #272727'}}>{singleUser.type}</td>
-//                         </tr>
-//                         <tr>
-//                             <td style={{ border: '1px solid #272727'}}>Email</td>
-//                             <td style={{ border: '1px solid #272727'}}>{singleUser.price}</td>
-//                         </tr>
+                        <tr>
+                            <td style={{ border: '1px solid #272727'}}>Name</td>
+                            <td style={{ border: '1px solid #272727'}}>
+                                <p>{singleUser.id}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style={{ border: '1px solid #272727'}}>Username</td>
+                            <td style={{ border: '1px solid #272727'}}>{singleUser.type}</td>
+                        </tr>
+                        <tr>
+                            <td style={{ border: '1px solid #272727'}}>Email</td>
+                            <td style={{ border: '1px solid #272727'}}>{singleUser.price}</td>
+                        </tr>
 //                         <tr>
 //                             <td style={{ border: '1px solid #272727'}}>Phone</td>
 //                             <td style={{ border: '1px solid #272727'}}>{singleUser.phone}</td>
