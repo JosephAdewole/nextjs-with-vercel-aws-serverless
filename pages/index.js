@@ -4,7 +4,6 @@ import axios from 'axios';
 const App = () => {
 
     const [singleUser, setSingleUser] = useState(null);
-    const [id, setId] = useState();
 
     const fetchSingleUser = () => {
         axios.post(`/api/getAllPets`).then((res) => setSingleUser(res.data))
