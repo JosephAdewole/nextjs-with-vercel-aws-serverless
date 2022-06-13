@@ -7,7 +7,7 @@ const App = () => {
     const [id, setId] = useState();
 
     const fetchSingleUser = () => {
-        axios.post(`/api/getAllPets?id`).then((res) => setSingleUser(res.data))
+        axios.post(`/api/getAllPets`).then((res) => setSingleUser(res.data))
     }
     
 
@@ -18,15 +18,7 @@ const App = () => {
     return (
         <div>
             <h1>Hello, Welcome to Next JS Serverless Function Demo</h1>
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <label htmlFor="userId">Enter user id</label>
-                <br />
-                <input type="number" value={id} placeholder="Enter id" onChange={(e) => { 
-                    const id = e.target.value;
-                    setId(id)
-                }} />
-            </form>
-            <br />
+            
             {singleUser && (
                 <table style={{ border: '1px solid #eeeeee'}}>
                     <tbody >
